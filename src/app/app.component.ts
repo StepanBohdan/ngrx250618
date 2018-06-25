@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Car, Cars } from './car.model';
+import { Car } from './car.model';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,8 @@ import { Car, Cars } from './car.model';
 })
 export class AppComponent {
   public cars: Car[] = [
-    new Car('Ferrari', '25.06.18', '458', false, 1),
-    new Car('Audi', '15.04.18', 'R8', false, 2),
+    new Car('Ferrari', '24.06.18', '458', false, 1),
+    new Car('Audi', '15.04.18', 'R8', false, 2)
   ];
 
   onAdd(car: Car) {
@@ -17,6 +17,7 @@ export class AppComponent {
   }
 
   onDelete(car: Car) {
-    this.cars = this.cars.filter( c => c.id !== car.id)
+    this.cars = this.cars
+      .filter( c => c.id !== car.id)
   }
 }

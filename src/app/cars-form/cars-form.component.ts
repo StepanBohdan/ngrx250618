@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Car } from '../car.model';
 import * as moment from 'moment'
+import { subscribeTo } from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-cars-form',
@@ -19,8 +20,10 @@ export class CarsFormComponent implements OnInit {
   }
 
   onAdd() {
-    if(this.carModel === '' || this.carName === '')
-      return this.id = ++this.id;
+    if(this.carModel === '' || this.carName === '') return
+    this.id = ++this.id;
+        // console.log(++this.id);
+
     const car = new Car(
       this.carName,
       moment().format('DD.MM.YY'),
