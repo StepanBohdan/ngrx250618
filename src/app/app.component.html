@@ -3,10 +3,11 @@
   (addCar)="onAdd($event)"></app-cars-form>
 
   <div class="list-group">
-    <app-car-single
+    <app-car
       (deleteCar)="onDelete($event)"
       [car]="c"
-        *ngFor="let c of cars"
-    ></app-car-single>
+        *ngFor="let c of (carState | async)?.cars"
+    ></app-car>
+    <!--sign '?' cause error undefined cars-->
   </div>
 </div>

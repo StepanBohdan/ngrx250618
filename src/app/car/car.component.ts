@@ -2,14 +2,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Car } from '../car.model';
 
 @Component({
-  selector: 'app-car-single',
-  templateUrl: './car-single.component.html',
-  styleUrls: ['./car-single.component.css']
+  selector: 'app-car',
+  templateUrl: './car.component.html',
+  styleUrls: ['./car.component.css']
 })
-export class CarSingleComponent {
+export class CarComponent {
 
   @Input() car: Car;
-  @Output() deleteCar = new EventEmitter<Car> ()
+  @Output() deleteCar = new EventEmitter<Car> ();
 
   onDelete() {
     this.deleteCar.emit(this.car);

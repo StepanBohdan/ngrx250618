@@ -14,7 +14,7 @@ export function carsReducer(state = initialState, action: AddCar) {
         ...state,
         cars: [...state.cars, action.payload]
         //add cars
-      };
+      }
     default:
       return state
   }

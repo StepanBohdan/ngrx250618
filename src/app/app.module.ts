@@ -5,14 +5,14 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { CarsFormComponent } from './cars-form/cars-form.component';
-import { CarSingleComponent } from './car-single/car-single.component';
+import { CarComponent } from './car/car.component';
 import { carsReducer } from './redux/cars.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarsFormComponent,
-    CarSingleComponent
+    CarComponent
   ],
   imports: [
     BrowserModule,
