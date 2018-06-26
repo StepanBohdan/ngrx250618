@@ -1,7 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Car } from '../car.model';
-import * as moment from 'moment'
-import { subscribeTo } from 'rxjs/internal-compatibility';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-cars-form',
