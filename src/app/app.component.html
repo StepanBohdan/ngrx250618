@@ -1,12 +1,18 @@
 <div class="container">
-  <app-cars-form
-  (addCar)="onAdd($event)"></app-cars-form>
+  <!--<app-cars-form-->
+  <!--(addCar)="onAdd($event)"></app-cars-form>-->
+
+  <app-cars-form></app-cars-form>
 
   <div class="list-group">
+    <!--<app-car-single-->
+      <!--(deleteCar)="onDelete($event)"-->
+      <!--[car]="c"-->
+        <!--*ngFor="let c of (carState | async).cars"-->
+    <!--&gt;</app-car-single>-->
     <app-car-single
-      (deleteCar)="onDelete($event)"
       [car]="c"
-        *ngFor="let c of cars"
+      *ngFor="let c of (carState | async).cars"
     ></app-car-single>
   </div>
 </div>

@@ -17,7 +17,7 @@ import { carsReducer } from './redux/cars.reducer';
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({CarPage: carsReducer}) //register reducers
+    StoreModule.forRoot({carPage: carsReducer})
   ],
   providers: [
 
