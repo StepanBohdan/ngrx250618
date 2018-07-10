@@ -15,5 +15,35 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "cars": [
+    {
+      "id": 1,
+      "name": "Ford",
+      "date": "12.12.12",
+      "model": "Mondeo",
+      "isSold": true
+    },
+    {
+      "id": 2,
+      "name": "Audi",
+      "date": "12.11.16",
+      "model": "A6",
+      "isSold": true
+    },
+    {
+      "name": "q",
+      "date": "10.07.18",
+      "model": "q",
+      "isSold": false,
+      "id": 4
+    },
+    {
+      "name": "ca",
+      "date": "10.07.18",
+      "model": "ca",
+      "isSold": false,
+      "id": 5
+    }
+  ]
 }

@@ -3,8 +3,8 @@ import { CAR_ACTION, CarsAction } from './cars.action';
 
 const initialState = {
   cars: [
-    new Car('Ferrari', '24.06.18', '458', false, 1),
-    new Car('Audi', '15.04.18', 'R8', false, 2)
+    // new Car('Ferrari', '24.06.18', '458', false, 1),
+    // new Car('Audi', '15.04.18', 'R8', false, 2)
   ]
 };
 export function carsReducer(state = initialState, action: CarsAction) {
@@ -25,6 +25,11 @@ export function carsReducer(state = initialState, action: CarsAction) {
       return {
         ...state,
         cars: [...state.cars]
+    }
+    case CAR_ACTION.LOAD_CARS:
+      return {
+        ...state,
+        cars: [...action.payload]
     }
     default:
       return state
