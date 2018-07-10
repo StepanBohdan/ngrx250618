@@ -29,5 +29,4 @@ export function carsReducer(state = initialState, action: CarsAction) {
     default:
       return state
   }
-
 }
