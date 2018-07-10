@@ -1,6 +1,5 @@
 import { Car } from '../car.model';
-import { AddCar, CAR_ACTION, CarsAction } from './cars.action';
-import { s } from '@angular/core/src/render3';
+import { CAR_ACTION, CarsAction } from './cars.action';
 
 const initialState = {
   cars: [
