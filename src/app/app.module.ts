@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
@@ -15,12 +15,27 @@ import { RouterModule } from '@angular/router';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'; //not for prod
 import { environment } from '../environments/environment.prod'; //not for prod
+// JWT
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+// used to create fake backend
+import { routing }        from './app.routing';
+import { HomeComponent } from './home';
+import { LoginComponent } from './login/login.component';
+import { fakeBackendProvider } from './_helpers/fake-backend';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CarsFormComponent,
-    CarSingleComponent
+    CarSingleComponent,
+
+    // JWT
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +47,20 @@ import { environment } from '../environments/environment.prod'; //not for prod
       {path: '', component: AppComponent}
     ]),
     StoreRouterConnectingModule,
-    environment.production ? [] : StoreDevtoolsModule.instrument() //not for prod
+    environment.production ? [] : StoreDevtoolsModule.instrument(), //not for prod
+
+    // JWT
+    ReactiveFormsModule,
+    routing
   ],
   providers: [
-    CarsService
+    CarsService,
+    // JWT
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

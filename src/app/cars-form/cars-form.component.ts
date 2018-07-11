@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+// import { Store } from '@ngrx/store';
 import { Car } from '../car.model';
 import * as moment_ from 'moment';
-import { AppState } from '../redux/app.state';
-import { AddCar } from '../redux/cars.action';
+// import { AppState } from '../redux/app.state';
+// import { AddCar } from '../redux/cars.action';
 import { CarsService } from '../cars.service';
 // import { subscribeTo } from 'rxjs/internal-compatibility';
 const moment = moment_;
@@ -17,7 +17,7 @@ export class CarsFormComponent implements OnInit {
   carName: string = '';
   carModel: string = '';
   // @Output() addCar = new EventEmitter<Car>();
-  constructor(private service: CarsService
+  constructor(private service: CarsService,
     // private store: Store<AppState>
   ) { }
 
@@ -35,7 +35,7 @@ export class CarsFormComponent implements OnInit {
     );
     // debugger cause without @Output didn`t work
     // this.addCar.emit(car);
-    this.service.addCar(car)
+    this.service.addCar(car);
     // this.store.dispatch(new AddCar(car));
     this.carName = '';
     this.carModel = '';
