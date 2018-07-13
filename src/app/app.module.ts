@@ -25,6 +25,7 @@ import { LoginComponent } from './login/login.component';
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -32,10 +33,11 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     AppComponent,
     CarsFormComponent,
     CarSingleComponent,
-
+    HeaderComponent,
     // JWT
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
