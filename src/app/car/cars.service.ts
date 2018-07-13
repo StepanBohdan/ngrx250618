@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Store } from '@ngrx/store';
-import { AppState } from './redux/app.state';
-import { AddCar, DeleteCar, LoadCars, UpdateCar } from './redux/cars.action';
+import { AppState } from '../redux/app.state';
+import { AddCar, DeleteCar, LoadCars, UpdateCar } from '../redux/cars.action';
 import { Car } from './car.model';
 import { Observable } from 'rxjs/Observable';
 

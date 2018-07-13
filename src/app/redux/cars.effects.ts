@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect } from '@ngrx/effects';
 import { AddCar, CAR_ACTION } from './cars.action';
 import { switchMap, mergeMap } from 'rxjs/operators';
-import { Car } from '../car.model';
-import { CarsService } from '../cars.service';
+import { Car } from '../car/car.model';
+import { CarsService } from '../car/cars.service';
 
 @Injectable()
 export  class CarsEffects {

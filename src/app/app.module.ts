@@ -4,10 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { CarsFormComponent } from './cars-form/cars-form.component';
-import { CarSingleComponent } from './car-single/car-single.component';
+import { CarsFormComponent } from './car/cars-form/cars-form.component';
+import { CarSingleComponent } from './car/car-single/car-single.component';
 import { carsReducer } from './redux/cars.reducer';
-import { CarsService } from './cars.service';
+import { CarsService } from './car/cars.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CarsEffects } from './redux/cars.effects';
 import { EffectsModule } from '@ngrx/effects';
@@ -26,11 +26,13 @@ import { fakeBackendProvider } from './_helpers/fake-backend';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { HeaderComponent } from './header/header.component';
+import { CarComponent } from './car/car.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CarComponent,
     CarsFormComponent,
     CarSingleComponent,
     HeaderComponent,

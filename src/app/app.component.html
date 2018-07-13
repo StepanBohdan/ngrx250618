@@ -1,20 +1,5 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+
 <div class="container">
-  <!--<app-cars-form-->
-  <!--(addCar)="onAdd($event)"></app-cars-form>-->
-
-  <app-cars-form></app-cars-form>
-
-  <div class="list-group">
-    <!--<app-car-single-->
-      <!--(deleteCar)="onDelete($event)"-->
-      <!--[car]="c"-->
-        <!--*ngFor="let c of (carState | async).cars"-->
-    <!--&gt;</app-car-single>-->
-    <app-car-single
-      [car]="c"
-      *ngFor="let c of (carState | async).cars"
-    ></app-car-single>
-  </div>
+  <router-outlet></router-outlet>
 </div>

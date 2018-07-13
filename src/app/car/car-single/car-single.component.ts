@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Car } from '../car.model';
 import { Store } from '@ngrx/store';
-import { AppState } from '../redux/app.state';
+import { AppState } from '../../redux/app.state';
 import { CarsService } from '../cars.service';
 
 @Component({

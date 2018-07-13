@@ -44,6 +44,13 @@
       "model": "ca",
       "isSold": false,
       "id": 5
+    },
+    {
+      "name": "mazda",
+      "date": "13.07.18",
+      "model": "m",
+      "isSold": false,
+      "id": 7
     }
   ]
 }

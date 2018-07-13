@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Car } from '../car.model';
+import { Car } from '../car/car.model';
 
 export namespace  CAR_ACTION {
   export const ADD_CAR = 'ADD_CAR'
